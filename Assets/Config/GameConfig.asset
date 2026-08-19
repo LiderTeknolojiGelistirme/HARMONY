@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a24927f132f7249a383ef4a8ea10ed, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::GameConfig
+  rosConnector: {fileID: 0}
+  execTopic: /harmony/cmd_input
+  imageTopicName: /image_robot1
+  imagePlaneRenderer: {fileID: 0}
+  robot1Image: {fileID: 0}
+  robot2Image: {fileID: 0}
+  jointStateTopicName: /robot1/joint_states
+  errorText: {fileID: 0}
+  crButton: {fileID: 0}
+  robot1VelocityText: {fileID: 0}
+  robot1ForceText: {fileID: 0}
+  robot1PositionsText: {fileID: 0}
+  robot2VelocityText: {fileID: 0}
+  robot2ForceText: {fileID: 0}
+  robot2PositionsText: {fileID: 0}
+  robot1CurrentTaskText: {fileID: 0}
+  robot1PreviousTasksText: {fileID: 0}
+  robot1MagicianStateText: {fileID: 0}
+  robot2CurrentTaskText: {fileID: 0}
+  robot2PreviousTasksText: {fileID: 0}
+  robot2MagicianStateText: {fileID: 0}
+  logText: {fileID: 0}
+  robot1PositionReferenceText: {fileID: 0}
+  robot1MotorPositionText: {fileID: 0}
+  robot1LinkPositionText: {fileID: 0}
+  robot1VelocityReferenceText: {fileID: 0}
+  robot1MotorVelocityText: {fileID: 0}
+  robot1LinkVelocityText: {fileID: 0}
+  robot1TorqueRefFfwdText: {fileID: 0}
+  robot1TorqueRefImpText: {fileID: 0}
+  robot1TorqueText: {fileID: 0}
+  robot1StiffnessText: {fileID: 0}
+  robot1DampingText: {fileID: 0}
+  robot1MotorTemperatureText: {fileID: 0}
+  robot1DriverTemperatureText: {fileID: 0}
+  robot1FaultText: {fileID: 0}
+  robot2PositionReferenceText: {fileID: 0}
+  robot2MotorPositionText: {fileID: 0}
+  robot2LinkPositionText: {fileID: 0}
+  robot2VelocityReferenceText: {fileID: 0}
+  robot2MotorVelocityText: {fileID: 0}
+  robot2LinkVelocityText: {fileID: 0}
+  robot2TorqueRefFfwdText: {fileID: 0}
+  robot2TorqueRefImpText: {fileID: 0}
+  robot2TorqueText: {fileID: 0}
+  robot2StiffnessText: {fileID: 0}
+  robot2DampingText: {fileID: 0}
+  robot2MotorTemperatureText: {fileID: 0}
+  robot2DriverTemperatureText: {fileID: 0}
+  robot2FaultText: {fileID: 0}
+  robot1StatusText: {fileID: 0}
+  robot1VoltageText: {fileID: 0}
+  robot2StatusText: {fileID: 0}
+  robot2VoltageText: {fileID: 0}
+  robot1JointSliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  robot1JointValueTexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  robot2JointSliders:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  robot2JointValueTexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  robot1RosControlStatusText: {fileID: 0}
+  robot1RosIoStatusText: {fileID: 0}
+  robot2RosControlStatusText: {fileID: 0}
+  robot2RosIoStatusText: {fileID: 0}
+  robot1Model: {fileID: 0}
+  robot2Model: {fileID: 0}

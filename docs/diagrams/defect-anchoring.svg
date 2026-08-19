@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 430" width="1020" height="430" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2ec4d8"/>
+    </marker>
+  </defs>
+
+  <rect width="1020" height="430" rx="10" fill="#0d1726"/>
+  <text x="30" y="38" fill="#7fe3f0" font-size="15" font-weight="600" letter-spacing="1.5">DEFECT ANCHORING — FROM ROS COORDINATES TO A MARKER ON THE REAL PART</text>
+  <line x1="30" y1="50" x2="990" y2="50" stroke="#1e3550" stroke-width="1"/>
+
+  <!-- stage 1 -->
+  <rect x="30" y="84" width="212" height="120" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="46" y="110" fill="#7fe3f0" font-size="13" font-weight="600">1 · Ingest</text>
+  <text x="46" y="134" fill="#c3d4e2" font-size="12">HarmonyDefectSubscriber</text>
+  <text x="46" y="155" fill="#8aa4bd" font-size="12">/harmony/mock_perception/</text>
+  <text x="46" y="172" fill="#8aa4bd" font-size="12">defect_list</text>
+  <text x="46" y="192" fill="#8aa4bd" font-size="12">JSON → defect records</text>
+
+  <line x1="244" y1="144" x2="288" y2="144" stroke="#2ec4d8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- stage 2 -->
+  <rect x="290" y="84" width="212" height="120" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="306" y="110" fill="#7fe3f0" font-size="13" font-weight="600">2 · Register surface</text>
+  <text x="306" y="134" fill="#c3d4e2" font-size="12">Operator places 4 anchors</text>
+  <text x="306" y="155" fill="#8aa4bd" font-size="12">upper-left, upper-right,</text>
+  <text x="306" y="172" fill="#8aa4bd" font-size="12">lower-left, lower-right</text>
+  <text x="306" y="192" fill="#8aa4bd" font-size="12">on the physical car door</text>
+
+  <line x1="504" y1="144" x2="548" y2="144" stroke="#2ec4d8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- stage 3 -->
+  <rect x="550" y="84" width="212" height="120" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="566" y="110" fill="#7fe3f0" font-size="13" font-weight="600">3 · Map</text>
+  <text x="566" y="134" fill="#c3d4e2" font-size="12">HarmonyDefectSurfaceMapper</text>
+  <text x="566" y="155" fill="#8aa4bd" font-size="12">defect (x, y, z) → bilinear</text>
+  <text x="566" y="172" fill="#8aa4bd" font-size="12">position inside the anchor</text>
+  <text x="566" y="192" fill="#8aa4bd" font-size="12">rectangle</text>
+
+  <line x1="764" y1="144" x2="808" y2="144" stroke="#2ec4d8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- stage 4 -->
+  <rect x="810" y="84" width="180" height="120" rx="6" fill="#14243a" stroke="#f5a524"/>
+  <text x="826" y="110" fill="#f5a524" font-size="13" font-weight="600">4 · Render</text>
+  <text x="826" y="134" fill="#c3d4e2" font-size="12">DefectMarkerManager</text>
+  <text x="826" y="155" fill="#8aa4bd" font-size="12">HarmonyDefectCallout</text>
+  <text x="826" y="172" fill="#8aa4bd" font-size="12">world-locked marker</text>
+  <text x="826" y="192" fill="#8aa4bd" font-size="12">+ leader line label</text>
+
+  <!-- anchor rectangle illustration -->
+  <text x="30" y="248" fill="#8aa4bd" font-size="12" font-weight="600" letter-spacing="1">ANCHOR RECTANGLE</text>
+
+  <rect x="120" y="272" width="300" height="120" rx="4" fill="#0f1f33" stroke="#2ec4d8" stroke-dasharray="6 4"/>
+  <text x="270" y="296" fill="#5b7a99" font-size="13" text-anchor="middle">CAR DOOR PANEL</text>
+
+  <circle cx="120" cy="272" r="9" fill="#14243a" stroke="#2ec4d8" stroke-width="2"/>
+  <text x="120" y="277" fill="#7fe3f0" font-size="11" text-anchor="middle">1</text>
+  <text x="120" y="262" fill="#8aa4bd" font-size="11" text-anchor="middle">upper-left</text>
+
+  <circle cx="420" cy="272" r="9" fill="#14243a" stroke="#2ec4d8" stroke-width="2"/>
+  <text x="420" y="277" fill="#7fe3f0" font-size="11" text-anchor="middle">2</text>
+  <text x="420" y="262" fill="#8aa4bd" font-size="11" text-anchor="middle">upper-right</text>
+
+  <circle cx="120" cy="392" r="9" fill="#14243a" stroke="#2ec4d8" stroke-width="2"/>
+  <text x="120" y="397" fill="#7fe3f0" font-size="11" text-anchor="middle">3</text>
+  <text x="120" y="416" fill="#8aa4bd" font-size="11" text-anchor="middle">lower-left</text>
+
+  <circle cx="420" cy="392" r="9" fill="#14243a" stroke="#2ec4d8" stroke-width="2"/>
+  <text x="420" y="397" fill="#7fe3f0" font-size="11" text-anchor="middle">4</text>
+  <text x="420" y="416" fill="#8aa4bd" font-size="11" text-anchor="middle">lower-right</text>
+
+  <circle cx="200" cy="352" r="7" fill="#f5d024"/>
+  <line x1="200" y1="352" x2="262" y2="322" stroke="#f5a524" stroke-width="2"/>
+  <rect x="262" y="306" width="104" height="30" rx="3" fill="#14243a" stroke="#f5a524"/>
+  <text x="314" y="326" fill="#e6f1f5" font-size="12" text-anchor="middle">DEF-03 · Dent</text>
+
+  <text x="470" y="286" fill="#c3d4e2" font-size="12">The four anchors define the plane and the extents of the physical part.</text>
+  <text x="470" y="308" fill="#c3d4e2" font-size="12">Every defect coordinate reported by ROS is expressed relative to that</text>
+  <text x="470" y="330" fill="#c3d4e2" font-size="12">rectangle, so the marker stays on the real panel as the operator walks</text>
+  <text x="470" y="352" fill="#c3d4e2" font-size="12">around the cell — no object detection or image tracking is involved.</text>
+  <text x="470" y="384" fill="#8aa4bd" font-size="12">Anchor placement is guided in-headset by the tutorial overlay.</text>
+</svg>

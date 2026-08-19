@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 660" width="1020" height="660" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2ec4d8"/>
+    </marker>
+    <marker id="arrowBi" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 10 0 L 0 5 L 10 10 z" fill="#2ec4d8"/>
+    </marker>
+  </defs>
+
+  <rect width="1020" height="660" rx="10" fill="#0d1726"/>
+
+  <text x="30" y="38" fill="#7fe3f0" font-size="15" font-weight="600" letter-spacing="1.5">HARMONY — SYSTEM ARCHITECTURE</text>
+  <line x1="30" y1="50" x2="990" y2="50" stroke="#1e3550" stroke-width="1"/>
+
+  <!-- ROS 2 cell -->
+  <text x="30" y="82" fill="#8aa4bd" font-size="12" font-weight="600" letter-spacing="1">ROS 2 CELL</text>
+  <rect x="30" y="94" width="230" height="86" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="46" y="120" fill="#e6f1f5" font-size="14" font-weight="600">UR10e + linear axis</text>
+  <text x="46" y="141" fill="#8aa4bd" font-size="12">Sensing robot — SR_MODE</text>
+  <text x="46" y="162" fill="#8aa4bd" font-size="12">/robot1/joint_states</text>
+
+  <rect x="30" y="192" width="230" height="86" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="46" y="218" fill="#e6f1f5" font-size="14" font-weight="600">Cleaning robot</text>
+  <text x="46" y="239" fill="#8aa4bd" font-size="12">Rework pass — CR_MODE</text>
+  <text x="46" y="260" fill="#8aa4bd" font-size="12">/harmony/cleaning/force</text>
+
+  <rect x="30" y="290" width="230" height="86" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="46" y="316" fill="#e6f1f5" font-size="14" font-weight="600">Perception stack</text>
+  <text x="46" y="337" fill="#8aa4bd" font-size="12">Surface defect detection</text>
+  <text x="46" y="358" fill="#8aa4bd" font-size="12">/harmony/.../defect_list</text>
+
+  <rect x="30" y="388" width="230" height="70" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="46" y="414" fill="#e6f1f5" font-size="14" font-weight="600">HARMONY PLC</text>
+  <text x="46" y="435" fill="#8aa4bd" font-size="12">OPC-UA bridge interface</text>
+
+  <!-- bridge -->
+  <line x1="262" y1="300" x2="336" y2="300" stroke="#2ec4d8" stroke-width="2" marker-start="url(#arrowBi)" marker-end="url(#arrow)"/>
+  <text x="299" y="288" fill="#7fe3f0" font-size="11" text-anchor="middle" font-weight="600">rosbridge</text>
+  <text x="299" y="320" fill="#8aa4bd" font-size="11" text-anchor="middle">ws:// :9090</text>
+
+  <!-- Unity client -->
+  <rect x="338" y="66" width="652" height="566" rx="8" fill="#101d30" stroke="#2ec4d8" stroke-width="1.5"/>
+  <text x="358" y="92" fill="#7fe3f0" font-size="12" font-weight="600" letter-spacing="1">UNITY CLIENT — MAGIC LEAP 2 (OpenXR)</text>
+
+  <rect x="358" y="106" width="612" height="94" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="374" y="130" fill="#7fe3f0" font-size="13" font-weight="600">Transport Layer — ROS#</text>
+  <text x="374" y="152" fill="#c3d4e2" font-size="12">RosConnector · rosbridge WebSocket client</text>
+  <text x="374" y="172" fill="#8aa4bd" font-size="12">JointState / RobotStatus / Telemetry / Defect / Image / Log subscribers</text>
+  <text x="374" y="191" fill="#8aa4bd" font-size="12">Background threads → concurrent queues → Unity main thread</text>
+
+  <line x1="664" y1="200" x2="664" y2="226" stroke="#2ec4d8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="676" y="218" fill="#8aa4bd" font-size="11">C# events</text>
+
+  <rect x="358" y="228" width="612" height="94" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="374" y="252" fill="#7fe3f0" font-size="13" font-weight="600">Mission Layer</text>
+  <text x="374" y="274" fill="#c3d4e2" font-size="12">HarmonyMissionController — Idle · Waiting · Sensing · Cleaning</text>
+  <text x="374" y="294" fill="#8aa4bd" font-size="12">ExecCommandViaSocket → /harmony/cmd_input</text>
+  <text x="374" y="313" fill="#8aa4bd" font-size="12">HarmonyTaskList · HarmonyFaultLogger · HarmonyDemoScenario</text>
+
+  <line x1="664" y1="322" x2="664" y2="348" stroke="#2ec4d8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="358" y="350" width="612" height="94" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="374" y="374" fill="#7fe3f0" font-size="13" font-weight="600">Presentation Layer</text>
+  <text x="374" y="396" fill="#c3d4e2" font-size="12">Master · Apprentice · Charts · Maintenance · PLC panels</text>
+  <text x="374" y="416" fill="#8aa4bd" font-size="12">DefectMarkerManager · Ghost trajectory · Force &amp; safety visualiser</text>
+  <text x="374" y="435" fill="#f5a524" font-size="12">Modern UI Pack — licensed, installed separately</text>
+
+  <rect x="358" y="456" width="300" height="94" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="374" y="480" fill="#7fe3f0" font-size="13" font-weight="600">Spatial Anchoring Layer</text>
+  <text x="374" y="502" fill="#c3d4e2" font-size="12">HarmonyDefectSurfaceMapper</text>
+  <text x="374" y="521" fill="#8aa4bd" font-size="12">4 spatial anchors → surface</text>
+  <text x="374" y="540" fill="#8aa4bd" font-size="12">SLAMPoseAnchor · PoseRefiner</text>
+
+  <rect x="670" y="456" width="300" height="94" rx="6" fill="#14243a" stroke="#3c5a78"/>
+  <text x="686" y="480" fill="#7fe3f0" font-size="13" font-weight="600">Identity</text>
+  <text x="686" y="502" fill="#c3d4e2" font-size="12">DatabaseManager → MySQL</text>
+  <text x="686" y="521" fill="#8aa4bd" font-size="12">Argon2id password hashing</text>
+  <text x="686" y="540" fill="#8aa4bd" font-size="12">Admin · Master · Apprentice</text>
+
+  <rect x="358" y="562" width="612" height="54" rx="6" fill="#0f1f33" stroke="#2a4157"/>
+  <text x="374" y="584" fill="#7fe3f0" font-size="13" font-weight="600">Composition — Zenject</text>
+  <text x="374" y="604" fill="#8aa4bd" font-size="12">GameInstaller binds GameConfig, RosConnector, the command publisher and every subscriber from the scene</text>
+</svg>

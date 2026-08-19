@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+  <uses-permission android:name="com.magicleap.permission.EYE_TRACKING" />
+  <uses-permission android:name="com.magicleap.permission.HAND_TRACKING" />
+  <uses-permission android:name="com.magicleap.permission.SPACE_IMPORT_EXPORT" />
+  <uses-permission android:name="com.magicleap.permission.SPACE_MANAGER" />
+  <uses-permission android:name="com.magicleap.permission.SPATIAL_ANCHOR" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <!--rosbridge WebSocket baglantisi icin gerekli-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!--ws:// sifresiz baglanti; Android 9+ varsayilan olarak cleartext trafigi engeller-->
+  <application android:usesCleartextTraffic="true" tools:replace="android:usesCleartextTraffic">
+    <!--Used when Application Entry is set to Activity, otherwise remove this activity block-->
+    <activity android:name="com.unity3d.player.UnityPlayerActivity" android:theme="@style/UnityThemeSelector">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+    </activity>
+  </application>
+</manifest>

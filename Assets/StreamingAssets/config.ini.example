@@ -1,0 +1,16 @@
+; ---------------------------------------------------------------------------
+; HARMONY veritabanı yapılandırma şablonu
+;
+; Bu dosyayı "config.ini" adıyla kopyalayın ve kendi MySQL sunucu bilgilerinizi
+; girin. config.ini .gitignore ile dışlanmıştır; asla commit etmeyin.
+;
+;   cp Assets/StreamingAssets/config.ini.example Assets/StreamingAssets/config.ini
+;
+; Beklenen şema için README.md → "Veritabanı" bölümüne bakın.
+; ---------------------------------------------------------------------------
+[Database]
+Server = 127.0.0.1
+Port = 3306
+User = CHANGE_ME
+Password = CHANGE_ME
+DatabaseName = HARMONY
