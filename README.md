@@ -1,5 +1,5 @@
 # HARMONY
-## AUGMENTED REALITY OPERATOR INTERFACE FOR HUMAN–ROBOT COLLABORATIVE SURFACE INSPECTION AND REWORK
+## HUMAN-AUGMENTED REALITY MONITORING FOR OPERATOR NAVIGATION AND YIELD
 
 HARMONY is a Unity-based mixed reality operator interface developed by Lider Teknoloji Gelistirme Ltd. Sti. for industrial human–robot collaboration cells. It places a live, spatially registered view of a dual-robot inspection and rework cell in front of the operator: the sensing robot scans a car door for surface defects, the detected defects are anchored onto the physical part in world space, and the operator approves, rejects or re-runs the cleaning pass from an AR panel. The application targets the Magic Leap 2 headset through OpenXR and communicates with the ROS 2 cell controller over `rosbridge`.
 
